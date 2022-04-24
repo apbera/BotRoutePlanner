@@ -1,0 +1,9 @@
+W naszym algorytmie sprawdzamy ścieżki od bota do wszystkich produktów o tej samej nazwie i od tego produktu do stacji odbiorczej używając algorytmu Dijkstry.
+W przypadku modyfikacji takiej, aby bot mógł dostarczyć produkt do jednej z wielu stacji odbiorczych trzeba by było dodać sprawdzanie ścieżki z produktu do każdej stacji odbiorczej.
+
+Wpływ na złożoność:
+Algorytm Dijkstry z użyciem macierzy sąsiedztwa ma złożoność O(V^2) = O((xy)^2).
+Nasz algorytm wywołuje algorytm Dijkstry 2*p razy, gdzie p to ilość produktów o tej samej nazwie.
+Po modyfikacji dla wielu stacji odbiorczych algorytm Dijkstry będzie wywoływany s*p  razy, gdzie s to ilość stacji odbiorczych.
+
+Złożoność z O(2*p*(xy)^2) wzrośnie do O(s*p*(xy)^2).
